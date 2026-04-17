@@ -1,0 +1,11 @@
+# robots.txt — Sofra Restaurant Kebab Boulogne-Billancourt
+# https://sofra-kebab.netlify.app
+
+User-agent: *
+Allow: /
+
+# Pages à ne pas indexer
+Disallow: /mentions-legales.html
+
+# Sitemap
+Sitemap: https://sofra-kebab.netlify.app/sitemap.xml

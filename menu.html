@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notre Carte — Sofra Kebab Boulogne-Billancourt | Sandwichs, Assiettes, Tacos</title>
+  <meta name="description" content="Découvrez la carte complète de Sofra : sandwichs grecs, assiettes kebab, tacos, burgers, brochettes, lahmacun, salades. Halal certifié à Boulogne-Billancourt." />
+  <link rel="canonical" href="https://sofra-kebab.netlify.app/menu.html" />
+
+  <meta property="og:title"       content="Carte — Sofra Kebab Boulogne-Billancourt" />
+  <meta property="og:description" content="Sandwichs, assiettes, tacos, burgers halal. Broche maison, frites fraîches. Découvrez notre carte." />
+  <meta property="og:url"         content="https://sofra-kebab.netlify.app/menu.html" />
+  <meta property="og:type"        content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥙</text></svg>" />
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Lato','Helvetica Neue',sans-serif;background:#FDF6EC;overflow-x:hidden}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:70px;display:flex;align-items:center;padding:0 1.25rem;background:rgba(30,15,10,0.97);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav-hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar--solid" role="navigation" aria-label="Navigation principale">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Sofra — Accueil">
+          <span class="navbar__logo-name">SO<span>FRA</span></span>
+          <span class="navbar__logo-tagline">Kebab Halal · Boulogne-Billancourt</span>
+        </a>
+        <ul class="navbar__nav" role="list">
+          <li><a href="index.html"       class="navbar__link">Accueil</a></li>
+          <li><a href="menu.html"        class="navbar__link navbar__link--active">Notre Carte</a></li>
+          <li><a href="apropos.html"     class="navbar__link">À Propos</a></li>
+          <li><a href="reservation.html" class="navbar__link">Contact</a></li>
+        </ul>
+        <a href="reservation.html" class="btn btn--primary navbar__cta">Réserver</a>
+        <button class="navbar__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="navbar__mobile-menu">
+      <a href="index.html"       class="navbar__mobile-link">🏠 Accueil</a>
+      <a href="menu.html"        class="navbar__mobile-link">🥙 Notre Carte</a>
+      <a href="apropos.html"     class="navbar__mobile-link">✨ À Propos</a>
+      <a href="reservation.html" class="navbar__mobile-link">📞 Contact</a>
+      <div class="navbar__mobile-cta">
+        <a href="reservation.html" class="btn btn--primary" style="width:100%;justify-content:center">Réserver une table</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <nav aria-label="Fil d'Ariane" class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <span>Notre Carte</span>
+        </nav>
+        <p class="page-hero__eyebrow">Fait Maison · Halal Certifié</p>
+        <h1 class="page-hero__title">Notre Carte</h1>
+        <p class="page-hero__subtitle">Toutes nos préparations sont réalisées avec des produits frais et une viande halal certifiée. Prix moyens : 8€ – 15€.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <main id="main-content">
+
+    <!-- SECTION CARTE -->
+    <section class="menu-section">
+      <div class="container">
+
+        <!-- Tabs de filtrage -->
+        <div class="menu-categories" role="tablist" aria-label="Catégories du menu">
+          <button class="menu-tab is-active" data-target="all"        role="tab" aria-selected="true">🍴 Tout voir</button>
+          <button class="menu-tab"           data-target="sandwichs"  role="tab" aria-selected="false">🥙 Sandwichs</button>
+          <button class="menu-tab"           data-target="assiettes"  role="tab" aria-selected="false">🍽 Assiettes</button>
+          <button class="menu-tab"           data-target="tacos"      role="tab" aria-selected="false">🌯 Tacos</button>
+          <button class="menu-tab"           data-target="burgers"    role="tab" aria-selected="false">🍔 Burgers</button>
+          <button class="menu-tab"           data-target="brochettes" role="tab" aria-selected="false">🍢 Brochettes</button>
+          <button class="menu-tab"           data-target="extras"     role="tab" aria-selected="false">🍟 Extras</button>
+        </div>
+
+        <!-- ===== SANDWICHS ===== -->
+        <div class="menu-category-section" data-category="sandwichs">
+          <h2 class="menu-category-title">🥙 Sandwichs</h2>
+          <div class="menu-grid">
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🥙</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                  <span class="badge badge--promo">🔥 Bestseller</span>
+                </div>
+                <h3 class="dish-card__name">Sandwich Grec Signature</h3>
+                <p class="dish-card__desc">Baguette fraîche maison, viande de broche, gruyère fondu, tomates, oignons, salade, sauce maison. Notre spécialité incontournable.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">9,50 €</span>
+                  <span class="dish-card__tag">Baguette</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🫓</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Sandwich Kebab Pita</h3>
+                <p class="dish-card__desc">Pain pita chaud, viande de broche généreuse, crudités fraîches, sauce blanche ou piquante au choix.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">8,50 €</span>
+                  <span class="dish-card__tag">Pita</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🐔</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Sandwich Poulet Grillé</h3>
+                <p class="dish-card__desc">Escalope de poulet marinée et grillée, pain baguette frais, crudités, sauce yaourt à la menthe.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">9,00 €</span>
+                  <span class="dish-card__tag">Poulet</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🐑</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Sandwich Agneau Épicé</h3>
+                <p class="dish-card__desc">Viande d'agneau marinée aux épices orientales, pain frais, salade de tomates, sauce harissa douce.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">10,00 €</span>
+                  <span class="dish-card__tag">Agneau</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ===== ASSIETTES ===== -->
+        <div class="menu-category-section" data-category="assiettes" style="margin-top:var(--spacing-3xl)">
+          <h2 class="menu-category-title">🍽 Assiettes & Plats</h2>
+          <div class="menu-grid">
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🍽</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                  <span class="badge badge--promo">⭐ Top avis</span>
+                </div>
+                <h3 class="dish-card__name">Assiette Kebab Complète</h3>
+                <p class="dish-card__desc">Genereux plateau avec viande de broche, blé, riz, frites fraîches maison, salade et sauce au choix. Le favori de nos clients.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">13,50 €</span>
+                  <span class="dish-card__tag">Complet</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🍗</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Assiette Poulet Grillé</h3>
+                <p class="dish-card__desc">Blanc de poulet grillé, accompagné de riz basmati, frites maison, salade verte et sauce fromagère.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">12,50 €</span>
+                  <span class="dish-card__tag">Poulet</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🫔</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Lahmacun / Pide</h3>
+                <p class="dish-card__desc">Pizza turque fine à la viande hachée épicée, oignons, tomates et persil, servie avec une salade fraîche.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">9,00 €</span>
+                  <span class="dish-card__tag">Turc</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ===== TACOS ===== -->
+        <div class="menu-category-section" data-category="tacos" style="margin-top:var(--spacing-3xl)">
+          <h2 class="menu-category-title">🌯 Tacos Maison</h2>
+          <div class="menu-grid">
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🌯</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Tacos au Poulet</h3>
+                <p class="dish-card__desc">Galette moelleuse, poulet grillé, fromage fondu, sauce fromagère, frites, oignons caramélisés.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">10,50 €</span>
+                  <span class="dish-card__tag">Poulet</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🌯</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                  <span class="badge badge--promo">🔥 Populaire</span>
+                </div>
+                <h3 class="dish-card__name">Tacos Mixte</h3>
+                <p class="dish-card__desc">Galette garnie de viande de broche + poulet, fromage fondu, sauce fromagère double, frites maison et oignons.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">12,00 €</span>
+                  <span class="dish-card__tag">Mixte</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🌯</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Tacos Végétarien</h3>
+                <p class="dish-card__desc">Galette garnie de légumes grillés, fromage, sauce cheddar, oignons et tomates fraîches. Option sans viande.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">9,50 €</span>
+                  <span class="dish-card__tag">Végé</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ===== BURGERS ===== -->
+        <div class="menu-category-section" data-category="burgers" style="margin-top:var(--spacing-3xl)">
+          <h2 class="menu-category-title">🍔 Burgers Halal</h2>
+          <div class="menu-grid">
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🍔</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                  <span class="badge badge--promo">⭐ Tripadvisor</span>
+                </div>
+                <h3 class="dish-card__name">Cheese Burger Sofra</h3>
+                <p class="dish-card__desc">Steak haché bœuf halal 150g, cheddar double fondu, salade, tomate, oignon, sauce maison sur pain brioché grillé.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">10,50 €</span>
+                  <span class="dish-card__tag">Bœuf</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🍔</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Burger Poulet Croustillant</h3>
+                <p class="dish-card__desc">Filet de poulet pané croustillant, cheddar, salade, cornichons, sauce ranch maison sur pain brioché.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">10,00 €</span>
+                  <span class="dish-card__tag">Poulet</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ===== BROCHETTES ===== -->
+        <div class="menu-category-section" data-category="brochettes" style="margin-top:var(--spacing-3xl)">
+          <h2 class="menu-category-title">🍢 Brochettes & Grillades</h2>
+          <div class="menu-grid">
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🍢</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Brochettes d'Agneau</h3>
+                <p class="dish-card__desc">2 brochettes d'agneau marinées aux épices orientales, grillées au feu de bois. Servies avec riz et salade.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">14,00 €</span>
+                  <span class="dish-card__tag">Agneau</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🍗</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Brochettes de Poulet</h3>
+                <p class="dish-card__desc">2 brochettes de poulet marinées au citron et herbes, grillées. Accompagnées de frites maison et sauce yaourt.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">12,50 €</span>
+                  <span class="dish-card__tag">Poulet</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🥩</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges">
+                  <span class="badge badge--halal">✅ Halal</span>
+                </div>
+                <h3 class="dish-card__name">Mix Grill Sofra</h3>
+                <p class="dish-card__desc">Plateau complet : brochette agneau + brochette poulet + viande de broche, riz, frites, salade. Pour les grands appétits.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">18,00 €</span>
+                  <span class="dish-card__tag">Plateau</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ===== EXTRAS ===== -->
+        <div class="menu-category-section" data-category="extras" style="margin-top:var(--spacing-3xl)">
+          <h2 class="menu-category-title">🍟 Extras, Salades & Boissons</h2>
+          <div class="menu-grid">
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🥗</div>
+              <div class="dish-card__body">
+                <h3 class="dish-card__name">Salade Fraîche</h3>
+                <p class="dish-card__desc">Salade verte, tomates cerises, concombre, oignons rouges, feta, olives, vinaigrette citron.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">6,50 €</span>
+                  <span class="dish-card__tag">Salade</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🍟</div>
+              <div class="dish-card__body">
+                <div class="dish-card__badges"><span class="badge badge--promo">🔥 Maison</span></div>
+                <h3 class="dish-card__name">Frites Fraîches Maison</h3>
+                <p class="dish-card__desc">Pommes de terre fraîches coupées à la main, cuites à la commande. Croustillantes à l'extérieur, fondantes à l'intérieur.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">3,50 €</span>
+                  <span class="dish-card__tag">À partager</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="dish-card">
+              <div class="dish-card__emoji">🥤</div>
+              <div class="dish-card__body">
+                <h3 class="dish-card__name">Boissons</h3>
+                <p class="dish-card__desc">Sodas (Coca-Cola, Fanta, eau), jus de fruits, Ayran (yaourt turc salé), thé turc chaud.</p>
+                <div class="dish-card__footer">
+                  <span class="dish-card__price">dès 2,00 €</span>
+                  <span class="dish-card__tag">Boisson</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__content">
+          <h2 class="cta-band__title">Une question sur notre carte ?</h2>
+          <p class="cta-band__text">Contactez-nous ou passez directement en commande. Livraison disponible dans le quartier.</p>
+          <div class="cta-band__actions">
+            <a href="reservation.html" class="btn btn--secondary">📞 Nous appeler</a>
+            <a href="index.html"       class="btn btn--gold">🏠 Retour accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">SO<span>FRA</span></div>
+          <div class="footer__brand-tagline">Kebab Halal · Boulogne-Billancourt</div>
+          <p class="footer__brand-desc">Broche maison, frites fraîches, pain artisanal. Ouvert 7j/7 de 11h à 2h du matin.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
+            <a href="https://maps.app.goo.gl/KzyMWAdYBorgPTD18" class="footer__social-link" aria-label="Google Maps" target="_blank" rel="noopener">🗺</a>
+          </div>
+        </div>
+        <nav aria-label="Navigation footer">
+          <h3 class="footer__col-title">Navigation</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html"       class="footer__link">→ Accueil</a></li>
+            <li><a href="menu.html"        class="footer__link">→ Notre Carte</a></li>
+            <li><a href="apropos.html"     class="footer__link">→ À Propos</a></li>
+            <li><a href="reservation.html" class="footer__link">→ Réservation</a></li>
+            <li><a href="mentions-legales.html" class="footer__link">→ Mentions légales</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer__col-title">Infos pratiques</h3>
+          <ul class="footer__links" role="list">
+            <li><span class="footer__link">🕐 11h00 – 02h00 · 7j/7</span></li>
+            <li><a href="tel:+33950360778" class="footer__link">📞 09 50 36 07 78</a></li>
+            <li><span class="footer__link">🚇 Marcel Sembat (L9)</span></li>
+            <li><span class="footer__link">✅ Halal certifié</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Nous trouver</h3>
+          <div class="footer__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.2!2d2.2455606!3d48.8340436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ae93e91a0d5%3A0xe3b205804cc3124b!2sSofra!5e0!3m2!1sfr!2sfr!4v1713000000000" width="100%" height="180" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sofra sur Google Maps"></iframe>
+          </div>
+          <address class="footer__address"><strong>Sofra</strong><br>91 Av. Édouard Vaillant<br>92100 Boulogne-Billancourt</address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="current-year">2025</span> Sofra — Tous droits réservés.</p>
+        <nav class="footer__legal-links" aria-label="Liens légaux">
+          <a href="mentions-legales.html" class="footer__legal-link">Mentions légales</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
