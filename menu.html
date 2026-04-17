@@ -14,10 +14,35 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥙</text></svg>" />
 
+  <!-- ===== CSS CRITIQUE INLINE ===== -->
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Lato','Helvetica Neue',sans-serif;background:#FDF6EC;overflow-x:hidden}
-    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:70px;display:flex;align-items:center;padding:0 1.25rem;background:rgba(30,15,10,0.97);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:70px;display:flex;align-items:center;padding:0 1.25rem;background:rgba(30,15,10,.97);box-shadow:0 2px 20px rgba(0,0,0,.3)}
+    .navbar__inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin:0 auto}
+    .navbar__logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+    .navbar__logo-name{font-family:'Playfair Display',Georgia,serif;font-size:2rem;font-weight:700;color:#fff;letter-spacing:.05em}
+    .navbar__logo-name span{color:#D4A017}
+    .navbar__logo-tagline{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px}
+    .navbar__nav{display:flex;align-items:center;gap:2rem;list-style:none}
+    .navbar__link{font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.85);text-decoration:none;padding-bottom:4px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+    .navbar__link:hover,.navbar__link--active{color:#D4A017;border-bottom-color:#D4A017}
+    .navbar__burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .navbar__burger span{display:block;width:25px;height:2px;background:#fff;transition:all .3s}
+    .navbar__mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(30,15,10,.98);padding:1.5rem 1.25rem;flex-direction:column;gap:1rem;z-index:999}
+    .navbar__mobile-menu.is-open{display:flex}
+    .navbar__mobile-link{font-size:1.25rem;font-family:'Playfair Display',Georgia,serif;color:#fff;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;transition:color .2s,padding-left .2s}
+    .navbar__mobile-link:hover{color:#D4A017;padding-left:.5rem}
+    .navbar__mobile-cta{margin-top:1rem;text-align:center}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 2rem;border-radius:9999px;font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;transition:all .3s ease;cursor:pointer;border:2px solid transparent;text-decoration:none;white-space:nowrap}
+    .btn--primary{background:#C0392B;color:#fff;border-color:#C0392B}
+    .btn--primary:hover{background:#8B3A2A;border-color:#8B3A2A;transform:translateY(-2px)}
+    .btn--secondary{background:transparent;color:#fff;border-color:#fff}
+    .btn--gold{background:#D4A017;color:#1E0F0A;border-color:#D4A017}
+    @media(max-width:768px){
+      .navbar__nav,.navbar__cta{display:none!important}
+      .navbar__burger{display:flex}
+    }
   </style>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
