@@ -2100,56 +2100,378 @@ textarea.form-control {
 }
 
   </style>
-  <script>
+</head>
 
-// ── MOBILE NAV fix ──────────────────────────────────────
-(function() {
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar--solid" role="navigation" aria-label="Navigation principale">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Sofra — Accueil">
+          <span class="navbar__logo-name">SO<span>FRA</span></span>
+          <span class="navbar__logo-tagline">Kebab Halal · Boulogne-Billancourt</span>
+        </a>
+        <ul class="navbar__nav" role="list">
+          <li><a href="index.html"       class="navbar__link">Accueil</a></li>
+          <li><a href="menu.html"        class="navbar__link">Notre Carte</a></li>
+          <li><a href="apropos.html"     class="navbar__link">À Propos</a></li>
+          <li><a href="reservation.html" class="navbar__link navbar__link--active">Contact</a></li>
+        </ul>
+        <a href="tel:+33950360778" class="btn btn--primary navbar__cta">📞 Appeler</a>
+        <button class="navbar__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="navbar__mobile-menu">
+      <a href="index.html"       class="navbar__mobile-link">🏠 Accueil</a>
+      <a href="menu.html"        class="navbar__mobile-link">🥙 Notre Carte</a>
+      <a href="apropos.html"     class="navbar__mobile-link">✨ À Propos</a>
+      <a href="reservation.html" class="navbar__mobile-link">📞 Contact</a>
+      <div class="navbar__mobile-cta">
+        <a href="tel:+33950360778" class="btn btn--primary" style="width:100%;justify-content:center">📞 Appeler maintenant</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <nav aria-label="Fil d'Ariane" class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <span>Réservation & Contact</span>
+        </nav>
+        <p class="page-hero__eyebrow">Réservez votre table</p>
+        <h1 class="page-hero__title">Contact &amp; Réservation</h1>
+        <p class="page-hero__subtitle">Passez nous rendre visite ou contactez-nous pour réserver votre table — réponse garantie sous 24h.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <main id="main-content">
+
+    <!-- SECTION CONTACT GRID -->
+    <section class="section section--cream" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="sr-only" id="contact-title">Informations de contact et formulaire de réservation</h2>
+
+        <div class="contact-grid">
+
+          <!-- Infos contact -->
+          <aside aria-label="Coordonnées du restaurant">
+
+            <div class="section-header" style="text-align:left;margin-bottom:var(--spacing-2xl)">
+              <span class="section-header__eyebrow">Nous sommes là</span>
+              <h2 class="section-header__title" style="font-size:var(--fs-2xl)">Nos coordonnées</h2>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">📍</div>
+              <div>
+                <div class="contact-info__label">Adresse</div>
+                <div class="contact-info__value">
+                  91 Avenue Édouard Vaillant<br>
+                  92100 Boulogne-Billancourt<br>
+                  <a href="https://maps.app.goo.gl/KzyMWAdYBorgPTD18" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;color:var(--color-primary)">→ Ouvrir dans Google Maps</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">📞</div>
+              <div>
+                <div class="contact-info__label">Téléphone</div>
+                <div class="contact-info__value">
+                  <a href="tel:+33950360778">09 50 36 07 78</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">🕐</div>
+              <div>
+                <div class="contact-info__label">Horaires</div>
+                <div class="contact-info__value">
+                  Tous les jours<br>
+                  11h00 – 02h00
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">🚇</div>
+              <div>
+                <div class="contact-info__label">Transports</div>
+                <div class="contact-info__value">
+                  Métro Marcel Sembat (Ligne 9)<br>
+                  <span style="font-size:0.85rem;color:var(--color-text-light)">109m à pied</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">✅</div>
+              <div>
+                <div class="contact-info__label">Services</div>
+                <div class="contact-info__value" style="font-size:0.9rem;line-height:1.9">
+                  Halal certifié · Sur place · À emporter<br>
+                  Livraison · Accessible PMR · Parking nearby<br>
+                  CB acceptée · Tickets restaurant · Sodexo
+                </div>
+              </div>
+            </div>
+
+            <!-- Bloc livraison -->
+            <div style="background:var(--color-cream-dark);border-radius:var(--radius-md);padding:var(--spacing-lg);margin-top:var(--spacing-lg)">
+              <p style="font-weight:700;color:var(--color-dark);margin-bottom:var(--spacing-sm)">🛵 Commander en livraison</p>
+              <p style="font-size:var(--fs-sm);margin:0;color:var(--color-text-light)">Disponible sur <strong>Uber Eats</strong> et <strong>Google Food</strong>. Livraison rapide dans Boulogne-Billancourt et les communes voisines.</p>
+            </div>
+
+          </aside>
+
+          <!-- Formulaire -->
+          <div>
+            <div class="section-header" style="text-align:left;margin-bottom:var(--spacing-2xl)">
+              <span class="section-header__eyebrow">Message & Réservation</span>
+              <h2 class="section-header__title" style="font-size:var(--fs-2xl)">Écrivez-nous</h2>
+              <p style="color:var(--color-text-light);margin-top:var(--spacing-sm)">Pour une réservation de groupe, une question sur la carte ou un renseignement, utilisez le formulaire ci-dessous.</p>
+            </div>
+
+            <!-- Message de succès (caché par défaut) -->
+            <div class="form-success" aria-live="polite" role="status">
+              <div class="form-success__icon">✅</div>
+              <h3 style="color:#2E7D32;font-family:var(--font-display);margin-bottom:8px">Message envoyé !</h3>
+              <p style="color:#2E7D32;margin:0">Merci pour votre message. Nous vous répondrons dans les meilleurs délais. À très vite chez Sofra !</p>
+            </div>
+
+            <!-- Formulaire -->
+            <form id="contact-form" class="form-wrapper" novalidate aria-label="Formulaire de contact et réservation">
+
+              <div class="form-row">
+                <!-- Nom -->
+                <div class="form-group">
+                  <label for="nom">Votre nom <span class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    class="form-control"
+                    placeholder="Jean Dupont"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    aria-describedby="nom-error"
+                  />
+                  <span class="form-error-msg" id="nom-error" role="alert"></span>
+                </div>
+
+                <!-- Téléphone -->
+                <div class="form-group">
+                  <label for="telephone">Téléphone <span class="required">*</span></label>
+                  <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    class="form-control"
+                    placeholder="06 12 34 56 78"
+                    autocomplete="tel"
+                    required
+                    aria-required="true"
+                    aria-describedby="telephone-error"
+                  />
+                  <span class="form-error-msg" id="telephone-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">Email <span style="color:var(--color-text-light);font-weight:400;font-size:0.75rem">(optionnel)</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="jean@exemple.fr"
+                    autocomplete="email"
+                    aria-describedby="email-error"
+                  />
+                  <span class="form-error-msg" id="email-error" role="alert"></span>
+                </div>
+
+                <!-- Date -->
+                <div class="form-group">
+                  <label for="date">Date souhaitée <span style="color:var(--color-text-light);font-weight:400;font-size:0.75rem">(optionnel)</span></label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    class="form-control"
+                    aria-describedby="date-error"
+                  />
+                  <span class="form-error-msg" id="date-error" role="alert"></span>
+                </div>
+              </div>
+
+              <!-- Objet -->
+              <div class="form-group">
+                <label for="objet">Objet</label>
+                <select id="objet" name="objet" class="form-control">
+                  <option value="">Choisissez un objet…</option>
+                  <option value="reservation">Réservation de table</option>
+                  <option value="groupe">Réservation de groupe (10+ pers.)</option>
+                  <option value="livraison">Question sur la livraison</option>
+                  <option value="menu">Question sur la carte / allergies</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Votre message <span class="required">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  placeholder="Décrivez votre demande, précisez le nombre de personnes si c'est une réservation…"
+                  rows="5"
+                  maxlength="1000"
+                  required
+                  aria-required="true"
+                  aria-describedby="message-error"
+                ></textarea>
+                <span class="form-error-msg" id="message-error" role="alert"></span>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem">
+                📨 Envoyer le message
+              </button>
+
+              <p class="form-privacy">
+                🔒 Vos données ne sont utilisées que pour répondre à votre demande et ne seront jamais partagées avec des tiers.
+              </p>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GOOGLE MAPS EMBED -->
+    <section aria-label="Localisation sur Google Maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.2!2d2.2455606!3d48.8340436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ae93e91a0d5%3A0xe3b205804cc3124b!2sSofra!5e0!3m2!1sfr!2sfr!4v1713000000000"
+        width="100%"
+        height="420"
+        style="display:block;border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Sofra — 91 Avenue Édouard Vaillant, Boulogne-Billancourt"
+      ></iframe>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">SO<span>FRA</span></div>
+          <div class="footer__brand-tagline">Kebab Halal · Boulogne-Billancourt</div>
+          <p class="footer__brand-desc">Broche maison, frites fraîches, pain artisanal. Ouvert 7j/7 de 11h à 2h du matin.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
+            <a href="https://maps.app.goo.gl/KzyMWAdYBorgPTD18" class="footer__social-link" aria-label="Google Maps" target="_blank" rel="noopener">🗺</a>
+          </div>
+        </div>
+        <nav aria-label="Navigation footer">
+          <h3 class="footer__col-title">Navigation</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html"       class="footer__link">→ Accueil</a></li>
+            <li><a href="menu.html"        class="footer__link">→ Notre Carte</a></li>
+            <li><a href="apropos.html"     class="footer__link">→ À Propos</a></li>
+            <li><a href="reservation.html" class="footer__link">→ Réservation</a></li>
+            <li><a href="mentions-legales.html" class="footer__link">→ Mentions légales</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer__col-title">Infos pratiques</h3>
+          <ul class="footer__links" role="list">
+            <li><span class="footer__link">🕐 11h00 – 02h00 · 7j/7</span></li>
+            <li><a href="tel:+33950360778" class="footer__link">📞 09 50 36 07 78</a></li>
+            <li><span class="footer__link">🚇 Marcel Sembat (L9)</span></li>
+            <li><span class="footer__link">✅ Halal certifié</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Nous trouver</h3>
+          <div class="footer__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.2!2d2.2455606!3d48.8340436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ae93e91a0d5%3A0xe3b205804cc3124b!2sSofra!5e0!3m2!1sfr!2sfr!4v1713000000000" width="100%" height="180" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sofra sur Google Maps"></iframe>
+          </div>
+          <address class="footer__address"><strong>Sofra</strong><br>91 Av. Édouard Vaillant<br>92100 Boulogne-Billancourt</address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="current-year">2025</span> Sofra — Tous droits réservés.</p>
+        <nav class="footer__legal-links" aria-label="Liens légaux">
+          <a href="mentions-legales.html" class="footer__legal-link">Mentions légales</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
   var burger = document.querySelector('.navbar__burger');
   var menu   = document.querySelector('.navbar__mobile-menu');
-  var body   = document.body;
   if (!burger || !menu) return;
 
   function openMenu() {
     menu.classList.add('is-open');
     burger.classList.add('is-open');
     burger.setAttribute('aria-expanded', 'true');
-    body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   }
   function closeMenu() {
     menu.classList.remove('is-open');
     burger.classList.remove('is-open');
     burger.setAttribute('aria-expanded', 'false');
-    body.style.overflow = '';
-  }
-  function toggleMenu() {
-    menu.classList.contains('is-open') ? closeMenu() : openMenu();
+    document.body.style.overflow = '';
   }
 
   burger.addEventListener('click', function(e) {
     e.stopPropagation();
-    toggleMenu();
+    menu.classList.contains('is-open') ? closeMenu() : openMenu();
   });
 
-  // Fermer sur clic lien
   menu.querySelectorAll('.navbar__mobile-link').forEach(function(link) {
     link.addEventListener('click', closeMenu);
   });
 
-  // Fermer sur Echap
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeMenu();
   });
 
-  // Fermer en cliquant hors du menu
   document.addEventListener('click', function(e) {
     if (menu.classList.contains('is-open') &&
-        !menu.contains(e.target) &&
-        !burger.contains(e.target)) {
+        !menu.contains(e.target) && !burger.contains(e.target)) {
       closeMenu();
     }
   });
-})();
-
+});
 /**
  * MAIN.JS — Navigation mobile, scroll effects, animations
  * Sofra — Restaurant Kebab Boulogne-Billancourt
@@ -2582,337 +2904,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCharCounters();
 });
 
-  </script>
-</head>
-
-<body>
-
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar navbar--solid" role="navigation" aria-label="Navigation principale">
-      <div class="navbar__inner">
-        <a href="index.html" class="navbar__logo" aria-label="Sofra — Accueil">
-          <span class="navbar__logo-name">SO<span>FRA</span></span>
-          <span class="navbar__logo-tagline">Kebab Halal · Boulogne-Billancourt</span>
-        </a>
-        <ul class="navbar__nav" role="list">
-          <li><a href="index.html"       class="navbar__link">Accueil</a></li>
-          <li><a href="menu.html"        class="navbar__link">Notre Carte</a></li>
-          <li><a href="apropos.html"     class="navbar__link">À Propos</a></li>
-          <li><a href="reservation.html" class="navbar__link navbar__link--active">Contact</a></li>
-        </ul>
-        <a href="tel:+33950360778" class="btn btn--primary navbar__cta">📞 Appeler</a>
-        <button class="navbar__burger" aria-label="Ouvrir le menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <div class="navbar__mobile-menu">
-      <a href="index.html"       class="navbar__mobile-link">🏠 Accueil</a>
-      <a href="menu.html"        class="navbar__mobile-link">🥙 Notre Carte</a>
-      <a href="apropos.html"     class="navbar__mobile-link">✨ À Propos</a>
-      <a href="reservation.html" class="navbar__mobile-link">📞 Contact</a>
-      <div class="navbar__mobile-cta">
-        <a href="tel:+33950360778" class="btn btn--primary" style="width:100%;justify-content:center">📞 Appeler maintenant</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero__content">
-        <nav aria-label="Fil d'Ariane" class="breadcrumb">
-          <a href="index.html">Accueil</a>
-          <span>›</span>
-          <span>Réservation & Contact</span>
-        </nav>
-        <p class="page-hero__eyebrow">Réservez votre table</p>
-        <h1 class="page-hero__title">Contact &amp; Réservation</h1>
-        <p class="page-hero__subtitle">Passez nous rendre visite ou contactez-nous pour réserver votre table — réponse garantie sous 24h.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <main id="main-content">
-
-    <!-- SECTION CONTACT GRID -->
-    <section class="section section--cream" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 class="sr-only" id="contact-title">Informations de contact et formulaire de réservation</h2>
-
-        <div class="contact-grid">
-
-          <!-- Infos contact -->
-          <aside aria-label="Coordonnées du restaurant">
-
-            <div class="section-header" style="text-align:left;margin-bottom:var(--spacing-2xl)">
-              <span class="section-header__eyebrow">Nous sommes là</span>
-              <h2 class="section-header__title" style="font-size:var(--fs-2xl)">Nos coordonnées</h2>
-            </div>
-
-            <div class="contact-info__item">
-              <div class="contact-info__icon">📍</div>
-              <div>
-                <div class="contact-info__label">Adresse</div>
-                <div class="contact-info__value">
-                  91 Avenue Édouard Vaillant<br>
-                  92100 Boulogne-Billancourt<br>
-                  <a href="https://maps.app.goo.gl/KzyMWAdYBorgPTD18" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;color:var(--color-primary)">→ Ouvrir dans Google Maps</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-info__item">
-              <div class="contact-info__icon">📞</div>
-              <div>
-                <div class="contact-info__label">Téléphone</div>
-                <div class="contact-info__value">
-                  <a href="tel:+33950360778">09 50 36 07 78</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-info__item">
-              <div class="contact-info__icon">🕐</div>
-              <div>
-                <div class="contact-info__label">Horaires</div>
-                <div class="contact-info__value">
-                  Tous les jours<br>
-                  11h00 – 02h00
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-info__item">
-              <div class="contact-info__icon">🚇</div>
-              <div>
-                <div class="contact-info__label">Transports</div>
-                <div class="contact-info__value">
-                  Métro Marcel Sembat (Ligne 9)<br>
-                  <span style="font-size:0.85rem;color:var(--color-text-light)">109m à pied</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-info__item">
-              <div class="contact-info__icon">✅</div>
-              <div>
-                <div class="contact-info__label">Services</div>
-                <div class="contact-info__value" style="font-size:0.9rem;line-height:1.9">
-                  Halal certifié · Sur place · À emporter<br>
-                  Livraison · Accessible PMR · Parking nearby<br>
-                  CB acceptée · Tickets restaurant · Sodexo
-                </div>
-              </div>
-            </div>
-
-            <!-- Bloc livraison -->
-            <div style="background:var(--color-cream-dark);border-radius:var(--radius-md);padding:var(--spacing-lg);margin-top:var(--spacing-lg)">
-              <p style="font-weight:700;color:var(--color-dark);margin-bottom:var(--spacing-sm)">🛵 Commander en livraison</p>
-              <p style="font-size:var(--fs-sm);margin:0;color:var(--color-text-light)">Disponible sur <strong>Uber Eats</strong> et <strong>Google Food</strong>. Livraison rapide dans Boulogne-Billancourt et les communes voisines.</p>
-            </div>
-
-          </aside>
-
-          <!-- Formulaire -->
-          <div>
-            <div class="section-header" style="text-align:left;margin-bottom:var(--spacing-2xl)">
-              <span class="section-header__eyebrow">Message & Réservation</span>
-              <h2 class="section-header__title" style="font-size:var(--fs-2xl)">Écrivez-nous</h2>
-              <p style="color:var(--color-text-light);margin-top:var(--spacing-sm)">Pour une réservation de groupe, une question sur la carte ou un renseignement, utilisez le formulaire ci-dessous.</p>
-            </div>
-
-            <!-- Message de succès (caché par défaut) -->
-            <div class="form-success" aria-live="polite" role="status">
-              <div class="form-success__icon">✅</div>
-              <h3 style="color:#2E7D32;font-family:var(--font-display);margin-bottom:8px">Message envoyé !</h3>
-              <p style="color:#2E7D32;margin:0">Merci pour votre message. Nous vous répondrons dans les meilleurs délais. À très vite chez Sofra !</p>
-            </div>
-
-            <!-- Formulaire -->
-            <form id="contact-form" class="form-wrapper" novalidate aria-label="Formulaire de contact et réservation">
-
-              <div class="form-row">
-                <!-- Nom -->
-                <div class="form-group">
-                  <label for="nom">Votre nom <span class="required">*</span></label>
-                  <input
-                    type="text"
-                    id="nom"
-                    name="nom"
-                    class="form-control"
-                    placeholder="Jean Dupont"
-                    autocomplete="name"
-                    required
-                    aria-required="true"
-                    aria-describedby="nom-error"
-                  />
-                  <span class="form-error-msg" id="nom-error" role="alert"></span>
-                </div>
-
-                <!-- Téléphone -->
-                <div class="form-group">
-                  <label for="telephone">Téléphone <span class="required">*</span></label>
-                  <input
-                    type="tel"
-                    id="telephone"
-                    name="telephone"
-                    class="form-control"
-                    placeholder="06 12 34 56 78"
-                    autocomplete="tel"
-                    required
-                    aria-required="true"
-                    aria-describedby="telephone-error"
-                  />
-                  <span class="form-error-msg" id="telephone-error" role="alert"></span>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <!-- Email -->
-                <div class="form-group">
-                  <label for="email">Email <span style="color:var(--color-text-light);font-weight:400;font-size:0.75rem">(optionnel)</span></label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-control"
-                    placeholder="jean@exemple.fr"
-                    autocomplete="email"
-                    aria-describedby="email-error"
-                  />
-                  <span class="form-error-msg" id="email-error" role="alert"></span>
-                </div>
-
-                <!-- Date -->
-                <div class="form-group">
-                  <label for="date">Date souhaitée <span style="color:var(--color-text-light);font-weight:400;font-size:0.75rem">(optionnel)</span></label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    class="form-control"
-                    aria-describedby="date-error"
-                  />
-                  <span class="form-error-msg" id="date-error" role="alert"></span>
-                </div>
-              </div>
-
-              <!-- Objet -->
-              <div class="form-group">
-                <label for="objet">Objet</label>
-                <select id="objet" name="objet" class="form-control">
-                  <option value="">Choisissez un objet…</option>
-                  <option value="reservation">Réservation de table</option>
-                  <option value="groupe">Réservation de groupe (10+ pers.)</option>
-                  <option value="livraison">Question sur la livraison</option>
-                  <option value="menu">Question sur la carte / allergies</option>
-                  <option value="autre">Autre demande</option>
-                </select>
-              </div>
-
-              <!-- Message -->
-              <div class="form-group">
-                <label for="message">Votre message <span class="required">*</span></label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form-control"
-                  placeholder="Décrivez votre demande, précisez le nombre de personnes si c'est une réservation…"
-                  rows="5"
-                  maxlength="1000"
-                  required
-                  aria-required="true"
-                  aria-describedby="message-error"
-                ></textarea>
-                <span class="form-error-msg" id="message-error" role="alert"></span>
-              </div>
-
-              <!-- Submit -->
-              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem">
-                📨 Envoyer le message
-              </button>
-
-              <p class="form-privacy">
-                🔒 Vos données ne sont utilisées que pour répondre à votre demande et ne seront jamais partagées avec des tiers.
-              </p>
-
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- GOOGLE MAPS EMBED -->
-    <section aria-label="Localisation sur Google Maps">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.2!2d2.2455606!3d48.8340436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ae93e91a0d5%3A0xe3b205804cc3124b!2sSofra!5e0!3m2!1sfr!2sfr!4v1713000000000"
-        width="100%"
-        height="420"
-        style="display:block;border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Sofra — 91 Avenue Édouard Vaillant, Boulogne-Billancourt"
-      ></iframe>
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand-name">SO<span>FRA</span></div>
-          <div class="footer__brand-tagline">Kebab Halal · Boulogne-Billancourt</div>
-          <p class="footer__brand-desc">Broche maison, frites fraîches, pain artisanal. Ouvert 7j/7 de 11h à 2h du matin.</p>
-          <div class="footer__social">
-            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
-            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
-            <a href="https://maps.app.goo.gl/KzyMWAdYBorgPTD18" class="footer__social-link" aria-label="Google Maps" target="_blank" rel="noopener">🗺</a>
-          </div>
-        </div>
-        <nav aria-label="Navigation footer">
-          <h3 class="footer__col-title">Navigation</h3>
-          <ul class="footer__links" role="list">
-            <li><a href="index.html"       class="footer__link">→ Accueil</a></li>
-            <li><a href="menu.html"        class="footer__link">→ Notre Carte</a></li>
-            <li><a href="apropos.html"     class="footer__link">→ À Propos</a></li>
-            <li><a href="reservation.html" class="footer__link">→ Réservation</a></li>
-            <li><a href="mentions-legales.html" class="footer__link">→ Mentions légales</a></li>
-          </ul>
-        </nav>
-        <div>
-          <h3 class="footer__col-title">Infos pratiques</h3>
-          <ul class="footer__links" role="list">
-            <li><span class="footer__link">🕐 11h00 – 02h00 · 7j/7</span></li>
-            <li><a href="tel:+33950360778" class="footer__link">📞 09 50 36 07 78</a></li>
-            <li><span class="footer__link">🚇 Marcel Sembat (L9)</span></li>
-            <li><span class="footer__link">✅ Halal certifié</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer__col-title">Nous trouver</h3>
-          <div class="footer__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.2!2d2.2455606!3d48.8340436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ae93e91a0d5%3A0xe3b205804cc3124b!2sSofra!5e0!3m2!1sfr!2sfr!4v1713000000000" width="100%" height="180" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sofra sur Google Maps"></iframe>
-          </div>
-          <address class="footer__address"><strong>Sofra</strong><br>91 Av. Édouard Vaillant<br>92100 Boulogne-Billancourt</address>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">© <span id="current-year">2025</span> Sofra — Tous droits réservés.</p>
-        <nav class="footer__legal-links" aria-label="Liens légaux">
-          <a href="mentions-legales.html" class="footer__legal-link">Mentions légales</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
+</script>
 </body>
 </html>
